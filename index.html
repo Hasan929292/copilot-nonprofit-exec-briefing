@@ -187,6 +187,25 @@ section { margin-bottom: 34px; }
 /* Stats */
 .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 @media (max-width: 760px) { .stats-row { grid-template-columns: 1fr; } }
+
+/* Interactive demo banner */
+.demo-banner {
+  display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+  background: var(--ap-surface); border-radius: 24px; padding: 26px 30px;
+  box-shadow: var(--ap-shadow-sm); text-decoration: none; color: var(--ap-text);
+  transition: transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s ease;
+}
+.demo-banner:hover { transform: translateY(-3px); box-shadow: var(--ap-shadow-lg); }
+.demo-banner-text .eyebrow-label {
+  font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--ap-accent); margin-bottom: 4px;
+}
+.demo-banner-text h3 { margin: 0 0 4px; font-size: 1.2rem; font-weight: 700; letter-spacing: -0.01em; }
+.demo-banner-text p { margin: 0; color: var(--ap-text-muted); font-size: 0.92rem; }
+.demo-banner-cta {
+  flex-shrink: 0; background: var(--ap-accent); color: #fff; border-radius: 980px;
+  padding: 12px 22px; font-size: 0.9rem; font-weight: 700; white-space: nowrap;
+}
 .stat-card {
   background: var(--ap-surface); border-radius: 22px; padding: 28px 22px; text-align: center;
   box-shadow: var(--ap-shadow-sm);
@@ -284,6 +303,17 @@ footer.note a { color: var(--ap-text-soft); }
         </div>
       </a>
     </div>
+  </section>
+
+  <section class="reveal">
+    <a class="demo-banner" href="./demo/index.html" target="_blank" rel="noopener">
+      <div class="demo-banner-text">
+        <div class="eyebrow-label">Interactive demo</div>
+        <h3>Explore Copilot Continuum, hands-on</h3>
+        <p>Click through a guided, self-paced walkthrough of real Copilot prompts and responses — no meeting required.</p>
+      </div>
+      <div class="demo-banner-cta">Launch demo →</div>
+    </a>
   </section>
 
   <section class="reveal">

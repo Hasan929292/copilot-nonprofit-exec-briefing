@@ -156,19 +156,6 @@ section { margin-bottom: 34px; }
 .trust-item div b { display: block; font-size: 0.98rem; margin-bottom: 2px; font-weight: 600; }
 .trust-item div span { font-size: 0.88rem; color: var(--ap-text-muted); }
 
-/* Path / journey */
-.path-rail { display: flex; gap: 10px; align-items: stretch; }
-.path-step {
-  flex: 1 1 0; background: var(--ap-surface); border-radius: 18px;
-  padding: 18px 14px; text-align: center; box-shadow: var(--ap-shadow-sm);
-}
-.path-step .icon-lg { font-size: 1.6rem; }
-.path-step h4 { margin: 6px 0; font-size: 0.9rem; font-weight: 600; }
-.path-step a { font-size: 0.8rem; color: var(--ap-accent); text-decoration: none; font-weight: 600; }
-.path-step a:hover { color: var(--ap-accent-hover); }
-.path-arrow { display: flex; align-items: center; color: var(--ap-text-soft); font-size: 1.1rem; }
-@media (max-width: 760px) { .path-rail { flex-direction: column; } .path-arrow { display: none; } }
-
 /* CTA */
 .cta {
   background: linear-gradient(135deg, var(--ap-accent), #7c3aed);
@@ -192,6 +179,20 @@ section { margin-bottom: 34px; }
 .cta-button:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,0.24); }
 .cta-sub { margin-top: 10px; font-size: 0.82rem; opacity: 0.85; }
 
+/* Stats */
+.stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+@media (max-width: 760px) { .stats-row { grid-template-columns: 1fr; } }
+.stat-card {
+  background: var(--ap-surface); border-radius: 22px; padding: 28px 22px; text-align: center;
+  box-shadow: var(--ap-shadow-sm);
+}
+.stat-num {
+  font-size: 2.6rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1.05;
+  background: linear-gradient(90deg, var(--ap-accent), #7c3aed);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.stat-label { margin-top: 6px; font-size: 0.9rem; color: var(--ap-text-muted); font-weight: 500; line-height: 1.4; }
+
 footer.note {
   margin-top: 18px; font-size: 0.78rem; color: var(--ap-text-soft); text-align: center; line-height: 1.6;
 }
@@ -202,15 +203,32 @@ footer.note a { color: var(--ap-text-soft); }
 <div class="wrap">
 
   <div class="hero reveal">
-    <div class="kicker">✦ For Empath Health Leadership</div>
+    <div class="kicker">For Empath Health Leadership</div>
     <h1>Full Life Care runs on people. <span>Give every one an AI copilot.</span></h1>
-    <p class="sub">Empath Health already puts mission before margin for 1 in 5 hospice patients across Florida. Microsoft 365 Copilot gives your interdisciplinary teams back the hours lost to notes, reports, and paperwork — so they can spend it on care.</p>
+    <p class="sub">Microsoft 365 Copilot gives your interdisciplinary teams back the hours lost to notes, reports, and paperwork — so they can spend it on care.</p>
     <div class="hero-badge-row">
-      <div class="hero-badge">💚 15% nonprofit discount</div>
-      <div class="hero-badge">🔒 Your data never trains the model</div>
-      <div class="hero-badge">🧩 Already inside Word, Excel, Teams</div>
+      <div class="hero-badge">15% nonprofit discount</div>
+      <div class="hero-badge">Your data never trains the model</div>
+      <div class="hero-badge">Already inside Word, Excel, Teams</div>
     </div>
   </div>
+
+  <section class="reveal">
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-num">1 in 5</div>
+        <div class="stat-label">hospice patients in Florida cared for by Empath-affiliated hospices</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">7</div>
+        <div class="stat-label">trusted not-for-profit hospice brands united under one network</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">40+</div>
+        <div class="stat-label">years of community care from five of those affiliates</div>
+      </div>
+    </div>
+  </section>
 
   <section class="reveal">
     <div class="video-grid">
@@ -264,14 +282,12 @@ footer.note a { color: var(--ap-text-soft); }
   <section class="reveal">
     <div class="grid-2">
       <div class="card">
-        <div class="icon">💛</div>
         <h3>Mission before margin, protected</h3>
         <p>Every hour Copilot saves on documentation is an hour reinvested in care, workforce, and community — the reinvestment your model already runs on.</p>
       </div>
       <div class="card">
-        <div class="icon">🌎</div>
         <h3>Local touch, statewide strength</h3>
-        <p>One in five hospice patients in Florida. Copilot helps every affiliate — Suncoast, Tidewell, Trustbridge, and more — work at that scale without losing the personal relationship.</p>
+        <p>Copilot helps every affiliate — Suncoast, Tidewell, Trustbridge, and more — work at that scale without losing the personal relationship.</p>
       </div>
     </div>
   </section>
@@ -279,11 +295,11 @@ footer.note a { color: var(--ap-text-soft); }
   <section class="reveal">
     <div class="section-head"><h2>What it looks like for you</h2></div>
     <div class="chip-row">
-      <div class="chip">📋 IDT documentation: <b>hour → minutes</b></div>
-      <div class="chip">💬 Caregiver education: <b>drafted in plain language</b></div>
-      <div class="chip">📊 CMS &amp; quality reporting: <b>benchmarks, ready faster</b></div>
-      <div class="chip">🦋 Grief &amp; bereavement follow-up: <b>personal, not generic</b></div>
-      <div class="chip">🏥 Affiliate onboarding: <b>consistent, network-wide</b></div>
+      <div class="chip">IDT documentation: <b>hour → minutes</b></div>
+      <div class="chip">Caregiver education: <b>drafted in plain language</b></div>
+      <div class="chip">CMS &amp; quality reporting: <b>benchmarks, ready faster</b></div>
+      <div class="chip">Grief &amp; bereavement follow-up: <b>personal, not generic</b></div>
+      <div class="chip">Affiliate onboarding: <b>consistent, network-wide</b></div>
     </div>
   </section>
 
@@ -296,39 +312,10 @@ footer.note a { color: var(--ap-text-soft); }
   </section>
 
   <section class="reveal">
-    <div class="section-head"><h2>One short path to get there</h2></div>
-    <div class="path-rail">
-      <div class="path-step">
-        <div class="icon-lg">🌱</div>
-        <h4>101 — Awareness</h4>
-        <a href="https://www.youtube.com/watch?v=zqH-HtQbaeU" target="_blank" rel="noopener">🎥 Watch (1:41) →</a>
-      </div>
-      <div class="path-arrow">→</div>
-      <div class="path-step">
-        <div class="icon-lg">⚡</div>
-        <h4>Power User</h4>
-        <a href="https://learn.microsoft.com/en-us/training/paths/get-started-with-microsoft-365-copilot/" target="_blank" rel="noopener">📚 Learn →</a>
-      </div>
-      <div class="path-arrow">→</div>
-      <div class="path-step">
-        <div class="icon-lg">🛠️</div>
-        <h4>Builder</h4>
-        <a href="https://learn.microsoft.com/en-us/training/paths/build-foundation-extend-microsoft-365-copilot/" target="_blank" rel="noopener">📚 Build →</a>
-      </div>
-      <div class="path-arrow">→</div>
-      <div class="path-step">
-        <div class="icon-lg">🧑‍💻</div>
-        <h4>Developer</h4>
-        <a href="https://learn.microsoft.com/en-us/training/paths/prepare-microsoft-365-copilot-extensibility/" target="_blank" rel="noopener">📚 Extend →</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="reveal">
     <div class="cta">
       <h2>Ready to see it in your world?</h2>
       <p style="margin:0 0 22px;opacity:.9;font-size:1rem;">Book a free 1:1 Copilot coaching session — see it work on your own documents, in under 30 minutes.</p>
-      <a class="cta-button" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR86JDY2iGm5Hv3-hgaKEty1UMDUwU0JTQ0NLQVA2SkpUN0pOTURSVjZTQS4u" target="_blank" rel="noopener">🙋 Request 1:1 Copilot coaching →</a>
+      <a class="cta-button" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR86JDY2iGm5Hv3-hgaKEty1UMDUwU0JTQ0NLQVA2SkpUN0pOTURSVjZTQS4u" target="_blank" rel="noopener">Request 1:1 Copilot coaching →</a>
     </div>
   </section>
 
